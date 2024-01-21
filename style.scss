@@ -1,0 +1,46 @@
+$darkBlue: hsl(243, 87%, 12%);
+$deSaturatedBlue: hsl(238, 22%, 44%);
+$brightBlue: hsl(224, 93%, 58%);
+$moderateCyan: hsl(170, 45%, 43%);
+
+$white: hsl(240, 75%, 98%);
+$lightGray: hsl(0, 0%, 75%);
+
+@mixin universal {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+* {
+  @include universal;
+}
+
+nav {
+  padding: 1rem 2rem;
+  @include center;
+  .nav-center{
+    width:100%;
+@include space-between;
+  }
+  ul{
+    display: flex;
+    align-items: center;
+    gap:2rem;
+    list-style:none;
+
+  }li>a{
+    text-decoration:none;
+    color:$darkBlue;
+    text-transform:capitalize;
+  }
+}
